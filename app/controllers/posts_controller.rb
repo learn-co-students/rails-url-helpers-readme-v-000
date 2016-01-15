@@ -1,9 +1,15 @@
 class PostsController < ApplicationController
-	def index
-		@posts = Post.all
-	end
+  before_action :set_student, only: :show
+  
+  def index
+    @posts = Post.all
+  end
 
-	def show
-		@post = Post.find(params[:id])
-	end
+  def show
+  end
+
+  private
+  def set_student
+    @post = Post.find(params[:id])
+  end
 end
