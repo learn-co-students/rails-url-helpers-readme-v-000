@@ -1,2 +1,6 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.description %></p>
+<%if Post.exists?(@post.id+1)%>
+	<%post2=Post.find(@post.id+1)%>
+	<%=link_to post2.title, post_path(post2) %>
+<%end%>
