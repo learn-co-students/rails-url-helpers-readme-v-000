@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails rails-url-helpers-readme-v-000: development" uuid="15a694c7-90e6-4f7f-aeb4-cf4762af19fb">
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Rails rails-url-helpers-readme-v-000: test" uuid="3980515b-11bd-43d1-baea-2d52b8b267ef" />
+  </component>
+</project>
