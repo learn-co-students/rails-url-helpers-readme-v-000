@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		require 'pry'
 		@post = Post.find(params[:id])
 	end
 end
