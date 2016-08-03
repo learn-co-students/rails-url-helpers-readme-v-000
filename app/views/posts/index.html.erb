@@ -1,3 +1,7 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  this rails shortcut:
+  <div><%= link_to post.title, post_path(post) %></div>
+
+  is the same thing as:
+  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
 <% end %>
