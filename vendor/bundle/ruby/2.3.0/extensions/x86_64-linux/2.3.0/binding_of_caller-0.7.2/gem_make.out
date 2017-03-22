@@ -1,0 +1,16 @@
+current directory: /home/chenxi/fi/rails-url-helpers-readme-v-000/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/usr/bin/ruby2.3 -r ./siteconf20170322-3824-7zydab.rb extconf.rb
+
+current directory: /home/chenxi/fi/rails-url-helpers-readme-v-000/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target 'clean'.  Stop.
+
+current directory: /home/chenxi/fi/rails-url-helpers-readme-v-000/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /home/chenxi/fi/rails-url-helpers-readme-v-000/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.
