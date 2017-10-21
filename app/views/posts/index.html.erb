@@ -1,3 +1,15 @@
+<!-- <% @posts.each do |post| %>
+  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %> -->
+
+<!-- The code above is the old way to code. Below is helper route -->
+
+
+<!-- The code below is hard-code style
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %>  -->
+
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
