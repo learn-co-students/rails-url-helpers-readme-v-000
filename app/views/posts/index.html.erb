@@ -1,3 +1,19 @@
+<!-- <% @posts.each do |post| %>
+  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %> -->
+
+<!-- add link_to method instead to clean up code -->
+<!-- <% @posts.each do |post| %>
+  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %> -->
+
+<!-- add post_past and pass in post argument -->
+<!-- <% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post.id) %></div>
+<% end %> -->
+
+<!-- refactor post argument because rails knows if you pass in post as argument it should use post.id -->
+
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
