@@ -1,3 +1,15 @@
+<!-- 2004 :<% @posts.each do |post| %>
+  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %> -->
+
+<!-- This can be refactored <% @posts.each do |post| %>
+  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %> -->
+
+<!-- We can get rid of .id <% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post.id) %></div>
+<% end %>-->
+
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
