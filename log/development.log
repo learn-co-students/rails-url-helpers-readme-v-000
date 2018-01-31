@@ -9,3 +9,92 @@ Migrating to CreatePosts (20151230232412)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151230232412"]]
   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2018-01-31 09:47:37 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 23ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-01-31 09:47:51 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 368ms (Views: 366.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2018-01-31 09:47:52 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2018-01-31 09:47:52 -0700
+
+
+Started GET "/posts/1" for ::1 at 2018-01-31 09:47:59 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  app/controllers/posts_controller.rb:7:in `show'
+
+
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/posts/1" for ::1 at 2018-01-31 10:30:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  app/controllers/posts_controller.rb:7:in `show'
+
+
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.4ms)
+
+
+Started GET "/posts/1" for ::1 at 2018-01-31 10:30:11 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  app/controllers/posts_controller.rb:7:in `show'
+
+
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (120.9ms)
+
+
+Started GET "/" for ::1 at 2018-01-31 10:30:17 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (0.5ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-01-31 10:30:20 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/joshua/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-01-31 10:30:30 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 209ms (Views: 208.6ms | ActiveRecord: 0.1ms)
