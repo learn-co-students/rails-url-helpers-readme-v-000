@@ -1,3 +1,19 @@
+<!--    Final refactor     -->
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
+
+<!--    Second refactor     -->
+<!-- <% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post.id) %></div>
+<% end %> -->
+
+<!--    First refactor     -->
+<!-- <% @posts.each do |post| %>
+  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %> -->
+
+<!--    Original     -->
+<!-- <% @posts.each do |post| %>
+  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %> -->
