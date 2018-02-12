@@ -9,3 +9,44 @@ Migrating to CreatePosts (20151230232412)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151230232412"]]
   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2018-02-12 17:43:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 61ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/index" for ::1 at 2018-02-12 17:53:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 46ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=index):
+  app/controllers/posts_controller.rb:7:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.3.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Library/Ruby/Gems/2.3.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Library/Ruby/Gems/2.3.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.3.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.6ms)
+
+
+Started GET "/posts/" for ::1 at 2018-02-12 17:54:07 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 650ms (Views: 648.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2018-02-12 17:54:08 -0500
+
+
+Started GET "/posts/" for ::1 at 2018-02-12 17:54:17 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.3ms)
