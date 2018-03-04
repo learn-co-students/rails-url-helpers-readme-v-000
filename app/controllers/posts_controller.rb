@@ -5,7 +5,6 @@ class PostsController < ApplicationController
 
 	def show
 		current_post
-		# @post = Post.find(params[:id])
 	end
 
 	private
