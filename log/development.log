@@ -9,3 +9,29 @@ Migrating to CreatePosts (20151230232412)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151230232412"]]
   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started HEAD "/" for ::1 at 2018-03-27 10:49:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/susaneff/.rvm/gems/ruby-2.4.2/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 23ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-03-27 10:49:28 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/susaneff/.rvm/gems/ruby-2.4.2/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for ::1 at 2018-03-27 10:50:20 -0500
+Processing by Rails::InfoController#properties as */*
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  Rendered /Users/susaneff/.rvm/gems/ruby-2.4.2/gems/railties-4.2.10/lib/rails/templates/rails/info/properties.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2018-03-27 10:50:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/susaneff/.rvm/gems/ruby-2.4.2/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
