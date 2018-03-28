@@ -9,3 +9,5 @@ Migrating to CreatePosts (20151230232412)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151230232412"]]
   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+DEPRECATION WARNING: `named_routes.helpers` is deprecated, please use `route_defined?(route_name)` to see if a named route was defined. (called from irb_binding at (irb):7)
+DEPRECATION WARNING: `named_routes.helpers` is deprecated, please use `route_defined?(route_name)` to see if a named route was defined. (called from irb_binding at (irb):9)
