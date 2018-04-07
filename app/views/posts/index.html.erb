@@ -10,6 +10,17 @@
   <div><%= link_to post.title, "/posts/#{post.id}" %></div>
 <% end %> -->
 
-<% @posts.each do |post| %>
+<!-- Instead of hardcoding the path and using string interpolation,
+let's use post_path and pass in the post argument. -->
+
+<!-- <% @posts.each do |post| %>
   <div><%= link_to post.title, post_path(post.id) %></div>
+<% end %> -->
+
+<!-- Rails is smart enough to know that if you pass in the post object as an argument,
+it will automatically use the ID attribute -->
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
+
+<!-- We're using the link_to method to automatically create an HTML a tag. -->
