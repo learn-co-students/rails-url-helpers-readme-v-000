@@ -1,3 +1,15 @@
+<!-- <% @posts.each do |post| %>
+  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %> -->
+
+<!-- <% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post.id) %></div>
+<% end %> -->
+<!-- This is much better, but to be thorough, let's make one last
+refactor: Rails is smart enough to know that if you pass in
+the post object as an argument,
+it will automatically use the ID attribute,
+so we'll use this implementation code: -->
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
