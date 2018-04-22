@@ -1,3 +1,19 @@
+<!-- <% @posts.each do |post| %>
+  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %> -->
+
+<!-- hardcoding the path
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %> -->
+
+<!-- Rails is smart enough to know that if you pass in the post object as an argument, it will automatically use the ID attribute
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post.id) %></div>
+<% end %> -->
+
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
+
+<!-- using the link_to method to automatically create an HTML a tag. -->
