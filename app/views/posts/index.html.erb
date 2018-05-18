@@ -1,3 +1,11 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <!-- old code: <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+  OR
+  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+  OR
+  <div><%= link_to post.title, post_path(post.id)%> </div>
+  -->
+  
+  <div><%= link_to post.title, post_path(post) %></div>
+
 <% end %>
