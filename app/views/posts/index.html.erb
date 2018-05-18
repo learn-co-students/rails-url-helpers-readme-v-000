@@ -1,3 +1,25 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %>
+  </div>
 <% end %>
+
+
+<!-- Above is best. It will give same results as these listed below in order from
+     least dynamic to most dynamic. Most dynamic is the one used at top of page.
+
+Hard coded:
+<% @posts.each do |post| %>
+<div><a href='<%= "/posts/#{post.id}" %>'><%=post.title %></a></div>
+<% end %>
+
+which can be refactored to this below:
+<% @posts.each do |post| %>
+<div><%= link_to post.title, "/posts/#{post.id}" %>
+</div>
+<% end %>
+
+then refactor to this below:
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post.id) %>
+  </div>
+<% end %> -->
