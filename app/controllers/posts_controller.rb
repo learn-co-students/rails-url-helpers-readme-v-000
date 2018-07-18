@@ -6,4 +6,8 @@ class PostsController < ApplicationController
 	def show
 		@post = Post.find(params[:id])
 	end
+
+	def new
+	 "This is the Register Page"
+	end
 end
