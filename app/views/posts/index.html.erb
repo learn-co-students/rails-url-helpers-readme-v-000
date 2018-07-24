@@ -1,3 +1,7 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
+
+
+Failure/Error: expect(page).to have_link(second_post.title, href: post_path(second_post))
+       expected to find link "My Title" with href "/posts/1" but there were no matches
