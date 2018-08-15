@@ -1,3 +1,21 @@
+<!--
+1. Not using Rails Helper methods to create link
+  <% @posts.each do |post| %>
+    <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+  <% end %>
+
+2. Using Rails helper method link_to but still hardcoding path
+  <% @posts.each do |post| %>
+    <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+  <% end %>
+
+3. passes post as and argument with id
+  <% @posts.each do |post| %>
+    <div><%= link_to post.title, post_path(post.id) %></div>
+  <% end %>
+
+4. passes post as argument with no id, rails uses id attribute automatically
+-->
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %></div>
 <% end %>
