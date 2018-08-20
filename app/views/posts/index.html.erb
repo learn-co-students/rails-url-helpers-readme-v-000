@@ -1,3 +1,14 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <!--
+  Use the link_to method to auto create an HTML <a> tag
+
+  clunky:  <div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div> %>
+  better:  <div><%= link_to post.title, "/posts/#{post.id}" %></div>
+  better:  <div><%= link_to post.title, post_path(post.id) %></div>
+  best: (if the post object is passed in as an argument, Rails will auto use the ID attribute)
+  -->
+
+  <div><%= link_to post.title, post_path(post) %></div>
+
+  <!--  will produce <div><a href="/posts/1">My title</a>  -->
 <% end %>
