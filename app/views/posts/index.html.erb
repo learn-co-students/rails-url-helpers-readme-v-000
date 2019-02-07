@@ -1,3 +1,13 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <!-- hard coded -->
+  <!-- <div><a href='<%#= "/posts/#{post.id}" %>'><%#= post.title %></a></div> -->
+  
+  <!-- refactored, more abstract -->
+  <!-- <div><%#= link_to post.title, "/posts/#{post.id}" %></div> -->
+   
+  <!-- refactored, even more abstract -->
+  <!-- <div><%#= link_to post.title, post_path(post.id) %></div> -->
+  
+  <!-- refactored, best answer -->
+  <div><%= link_to post.title, post_path(post)  %></div>
 <% end %>
