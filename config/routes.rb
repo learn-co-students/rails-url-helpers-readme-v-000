@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
   resources :posts, only: [:index, :show]
+
+  get '/comments', to: 'posts#new', as: 'comments'
 end
