@@ -9,3 +9,100 @@ Migrating to CreatePosts (20151230232412)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151230232412"]]
   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-16 14:24:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 341ms (Views: 333.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-16 14:24:23 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Lets add some short"], ["description", "This thing is so bugged"], ["created_at", "2019-04-16 18:25:33.612704"], ["updated_at", "2019-04-16 18:25:33.612704"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-16 14:25:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 188ms (Views: 180.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2019-04-16 14:25:47 -0400
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2019-04-16 14:25:49 -0400
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2019-04-16 14:25:56 -0400
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-16 14:25:59 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-16 14:25:59 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2019-04-16 14:26:00 -0400
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2019-04-16 14:26:24 -0400
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-16 14:26:27 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-16 14:26:27 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2019-04-16 14:26:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 28.0ms | ActiveRecord: 0.2ms)
