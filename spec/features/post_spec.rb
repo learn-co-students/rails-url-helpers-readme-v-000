@@ -22,6 +22,10 @@ describe 'navigate' do
 end
 
 describe 'index page' do
+  before do
+    @post = Post.create(title: "My Post", description: "My post desc")
+  end
+  
   it 'links to post page' do
     second_post = Post.create(title: "My Title", description: "My post description")
     visit posts_path
