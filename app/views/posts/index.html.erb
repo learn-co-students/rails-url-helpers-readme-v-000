@@ -1,0 +1,24 @@
+<!-- My attempt -->
+<%# @posts.each do |post| %>
+  <!-- <div><a href="/posts/<%#= post.id %>"><%#= post.title %></a></div> -->
+<%# end %>
+
+<!-- Their first solution -->
+<%# @posts.each do |post| %>
+  <!-- <div><a href='<%#= "/posts/#{post.id}" %>'><%#= post.title %></a></div> -->
+<%# end %>
+
+<!-- Their second solution -->
+<%# @posts.each do |post| %>
+  <!-- <div><%#= link_to post.title, "/posts/#{post.id}" %></div> -->
+<%# end %>
+
+<!-- Their refactored solution -->
+<%# @posts.each do |post| %>
+  <!-- <div><%#= link_to post.title, post_path(post.id) %></div> -->
+<%# end %>
+
+<!-- Their FINAL refactored solution -->
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post) %></div>
+<% end %>
